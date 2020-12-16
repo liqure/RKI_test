@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
-  <body class="light">
+  <body class="dark">
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
     </div>
@@ -23,7 +23,7 @@
     </div>
     <div id="unity-fullscreen-button" style="display: none;"></div>
     <script>
-      const hideFullScreenButton = "";
+      const hideFullScreenButton = "true";
       const buildUrl = "Build";
       const loaderUrl = buildUrl + "/RKI_games.loader.js";
       const config = {
@@ -63,7 +63,6 @@
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
       }
-      canvas.style.background = "url('" + buildUrl + "/RKI_games.jpg') center / cover";
       loadingCover.style.display = "";
 
       const script = document.createElement("script");
