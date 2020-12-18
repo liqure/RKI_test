@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} !^game\.totaldict\.ru$
+RewriteRule ^(.*)$ https://game.totaldict.ru/$1 [R=301,L]
+
+RewriteCond %{HTTP:X-Forwarded-Proto} ^http$
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
